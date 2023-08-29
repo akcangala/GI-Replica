@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { useState } from 'react';
-import TodoList from './TodoList';
-import Heroes from './Heroes';
+import { useState } from 'react'; 
 import Mondstadt from './Mondstadt';
 import Liyue from './Liyue';
 import Inazuma from './Inazuma';
