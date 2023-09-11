@@ -499,23 +499,29 @@ bottom:0;  height: 200px;
 
 
 .line {
-  display: block;
-    content: '';
+  /* display: block;
+    content: ''; */
     width: 180px;
     height: 4px;
     background: #e3bc8c;
 }
 .va {
   /* width: 290px; */
-  min-width: 290px;
-  max-width: 320px;
+  /* min-width: 290px;
+  max-width: 320px; */
+  width: fit-content;
     background-color: #cca574;
     height: 54px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
+    padding: 0 20px;
+
     box-shadow: 5px 5px 5px #313131;
+}
+
+.testing {
+  background-color: #cca574;
 }
 .va >p {
   display: flex;
@@ -687,8 +693,8 @@ bottom:0;  height: 200px;
 
 /* #img {
   display: none;
-}
-.img1 {
+} */
+/* .img1 {
   display: none;
 } */
 .sidebarRegion {

@@ -51,7 +51,7 @@ import electroVision from "../public/images/vision/electro.png"
 import pyroVision from "../public/images/vision/pyro.png"
 import dendroVision from "../public/images/vision/dendro.png"
 import geoVision from "../public/images/vision/geo.png"
- 
+
 import genshinLogo from "../public/images/wallpaper/genshinLogo.png";
 
 // import Carousel from "react-multi-carousel";
@@ -59,7 +59,7 @@ import genshinLogo from "../public/images/wallpaper/genshinLogo.png";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";   
+import "slick-carousel/slick/slick-theme.css";
 
 
 const roles = [
@@ -204,7 +204,7 @@ const roles = [
         info: `An alchemist with an insatiable curiosity towards the world and everything in it. Attached to the Knights of Favonius as an assistant to Albedo, her area of focus is "bio-alchemy."`,
         info2: "She strives to enrich the world by transforming living things with the power of alchemy.",
         info3: "Granted, the products of her research sometimes prove to be more weird than wonderful — but on the whole, she has made monumental contributions to the field of bio-alchemy.",
-        
+
     },
     {
         tn: monaThumbnail,
@@ -246,7 +246,7 @@ const roles = [
         alt: "Rosaria",
         main: rosariaMain,
         va: "VA: KAKUMA Ai",
-        
+
         info: "Rosaria, a sister in Mondstadt's Church of Favonius.",
         info2: "A sister of the church, though you wouldn't know it if it weren't for her attire. An unusual woman with sharp, piercing words and a cold manner.",
         info3: "AHer movements are unpredictable. She often leaves without notifying anyone. She acts with some kind of purpose, but others don't seem to know exactly what she stands for...",
@@ -259,7 +259,7 @@ const roles = [
         main: eulaMain,
         va: "VA: SATO Rina",
         info: "A rebellious descendant of the old aristocracy who is always out on the battlefield.",
-        info2: `As one born into the old aristocracy, carrying the bloodline of sinners, Eula has needed a unique approach to the world to navigate the towering walls of prejudice peacefully. Of course, this did not prevent her from severing ties with her clan. As the outstanding Spindrift Knight, she hunts down Mondstadt's enemies in the wild to exact her unique "vengeance".`, 
+        info2: `As one born into the old aristocracy, carrying the bloodline of sinners, Eula has needed a unique approach to the world to navigate the towering walls of prejudice peacefully. Of course, this did not prevent her from severing ties with her clan. As the outstanding Spindrift Knight, she hunts down Mondstadt's enemies in the wild to exact her unique "vengeance".`,
     },
     {
         tn: aloyThumbnail,
@@ -268,7 +268,7 @@ const roles = [
         alt: "Aloy",
         main: aloyMain,
         va: "VA: TAKAGAKI Ayahi",
-        info: "An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.", 
+        info: "An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.",
     },
     {
         tn: mikaThumbnail,
@@ -278,7 +278,7 @@ const roles = [
         main: mikaMain,
         va: "VA: SANPEI Yuko",
         info: "A young knight who is a key member of the front-line scouting team. Quiet and unassuming, Mika treats every task seriously, and can cook up a mean serving of field rations.",
-        info2: "However, he can't seem to hide his bashful and shy personality when meeting strangers.", 
+        info2: "However, he can't seem to hide his bashful and shy personality when meeting strangers.",
     }
 ]
 
@@ -291,85 +291,85 @@ const Mondstadt = () => {
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = event => {
-      // 👇️ toggle isActive state on click
-      setIsActive(current => !current);
+        // 👇️ toggle isActive state on click
+        setIsActive(current => !current);
     };
 
-    var settings = { 
+    var settings = {
         infinite: true,
         speed: 500,
         slidesToShow: 6,
-        slidesToScroll: 1, 
+        slidesToScroll: 1,
         centerPadding: "0px",
         focusOnSelect: true,
         centerMode: true,
-        
-        nextArrow: <SampleNextArrow />, 
-        
+
+        nextArrow: <SampleNextArrow />,
+
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1, 
-              }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
             },
             {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 2
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }]
-      };
+    };
 
-      function SampleNextArrow(props) {
+    function SampleNextArrow(props) {
         const { className, style, onClick } = props;
         return (
-          <div 
-            className={className}
-            style={{...style, height:"20px" ,display: "block", backgroundImage: amberMain}}
-            onClick={onClick}
-          />
+            <div
+                className={className}
+                style={{ ...style, height: "20px", display: "block", backgroundImage: amberMain }}
+                onClick={onClick}
+            />
         );
-      }
+    }
 
     return (
-        <div className="mond"> 
-        <div className="mondstadtWallpaper1"></div>
+        <div className="mond">
+            <div className="mondstadtWallpaper1"></div>
             <div className="header">
-            <Image 
-                src={genshinLogo}
-                height={65} />
+                <Image
+                    src={genshinLogo}
+                    height={65} />
             </div>
-            <div className="diagonal"> 
+            <div className="diagonal">
             </div>
-            <div className="img1"> 
+            <div className="img1">
                 <div className="charInfo2" >
                     <div className="line"></div>
-                    <p className="para"> {roles[genshinCharacter].name}</p> 
+                    <p className="para"> {roles[genshinCharacter].name}</p>
                     <div className="va">
                         <div className="smallDia1">
                             <div className="smallhalfDia1"></div></div>
                         <p>{roles[genshinCharacter].va}</p> 
-                    </div> 
-                    <div className="info">
-                    <div className="info-dia">
-                    <div className="smallDia2">
-                            <div className="smallhalfDia2"></div></div>
                     </div>
+                    <div className="info">
+                        <div className="info-dia">
+                            <div className="smallDia2">
+                                <div className="smallhalfDia2"></div></div>
+                        </div>
                         <div className="info2">
-                        <p className="characterInformation">{roles[genshinCharacter].info} <br/>
-                       {roles[genshinCharacter].info2} <br/>
-                       {roles[genshinCharacter].info3} <br/></p>
+                            <p className="characterInformation">{roles[genshinCharacter].info} <br />
+                                {roles[genshinCharacter].info2} <br />
+                                {roles[genshinCharacter].info3} <br /></p>
                         </div>
                     </div>
                 </div>
@@ -378,7 +378,7 @@ const Mondstadt = () => {
                     height={380}
                     width={360}
                 />
-                <Image  style={{ position: "absolute", top: '3px', left: "19%", marginTop: 0, zIndex: 2 }}
+                <Image style={{ position: "absolute", top: '3px', left: "19%", marginTop: 0, zIndex: 2 }}
                     src={roles[genshinCharacter].main}
                     height={920}
                     width={1500}
@@ -386,34 +386,34 @@ const Mondstadt = () => {
             </div>
             <div className="characterIntro">
                 <div className="characterIntroFlex">
-                <div className="firstLine">
-                    <div className="triangle-left"></div>
-                    <div className="triangle-left"></div>   
-                    <div className="triangle-left"></div>   
-                    <p>CHARACTER INTRODUCTION</p>
-                </div>
-                <div className="secondLine">
-                    <p>MONDSTADT</p>
-                </div>
+                    <div className="firstLine">
+                        <div className="triangle-left"></div>
+                        <div className="triangle-left"></div>
+                        <div className="triangle-left"></div>
+                        <p>CHARACTER INTRODUCTION</p>
+                    </div>
+                    <div className="secondLine">
+                        <p>MONDSTADT</p>
+                    </div>
                 </div>
             </div>
             <div id="img" >
                 {/* map through texts array */}
-                <div className="characterThumbnails"> 
+                <div className="characterThumbnails">
                     <div className="thumbnailDiv" >
-                    <Slider {...settings}> 
-                        {roles.map((role, index) => (
-                            <div id={roles[index].name} style={{width:"100px"}}className={index==genshinCharacter ? 'active' : ''} onClick={() => {setgenshinCharacter(index); handleClick(index)}}> 
-                                <ThumbnailComponent 
-                                    key={index}
-                                    thumbnail={roles[index].tn}
-                                    name={roles[index].alt}
-                                    altt={roles[index].alt}
-                                /> 
-                            </div>
-                        ))}
+                        <Slider {...settings}>
+                            {roles.map((role, index) => (
+                                <div id={roles[index].name} style={{ width: "100px" }} className={index == genshinCharacter ? 'active' : ''} onClick={() => { setgenshinCharacter(index); handleClick(index) }}>
+                                    <ThumbnailComponent
+                                        key={index}
+                                        thumbnail={roles[index].tn}
+                                        name={roles[index].alt}
+                                        altt={roles[index].alt}
+                                    />
+                                </div>
+                            ))}
                         </Slider>
-                    </div> 
+                    </div>
                 </div>
             </div>
 

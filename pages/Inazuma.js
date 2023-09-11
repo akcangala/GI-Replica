@@ -56,7 +56,7 @@ const roles = [
         element: cryoVision,
         alt: "Kamisato Ayaka",
         main: ayakaMain,
-        va: "VA: KOBAYASHI Sanae",
+        va: "VA: HAYAMI Saori",
         info: "Daughter of the Yashiro Commission's Kamisato Clan from Inazuma. Dignified and elegant, wise and determined.",
         info2: "Sincere and pleasant to others. Universally loved by the Inazuma people, she has earned the title of Shirasagi Himegimi.", 
     },
